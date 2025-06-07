@@ -1,3 +1,9 @@
+/* Satrt variables */
+:root {
+  --main-color:#19c8fa;
+}
+/* End variables */
+
 /* Start Global Rules */
 * {
   box-sizing: border-box;
@@ -52,7 +58,7 @@ ul {
 /* Start Header */
 
 
-header {}
+ 
 
 header .container {
   display: flex;
@@ -79,6 +85,50 @@ header .logo img {
 
 header nav {
   flex: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul li a {
+  padding: 40px 10px;
+  display: block;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+  z-index: 2;
+
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+color: var(--main-color);
+border-bottom: 1px solid var(--main-color);
+  
+}
+
+
+header .form {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-left: 30px;
+  border-left:1px solid white;
+}
+
+header .form i {
+  color:white;
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
 /* End Header */
