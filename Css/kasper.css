@@ -348,6 +348,7 @@ header .form i {
 /* Start Services */
 .services {
   padding-top: var(--section-padding);
+
   padding-bottom: var(--section-padding);
 
 
@@ -428,22 +429,22 @@ header .form i {
   flex: 1;
 }
 
-.design .image{
+.design .image {
   text-align: center;
 }
 
 
 @media (max-width:767px) {
-  .design .image{
+  .design .image {
     display: none;
   }
 }
 
 
 
-.design .image img{
-position: relative;
-bottom: -150px;
+.design .image img {
+  position: relative;
+  bottom: -150px;
 }
 
 .design .text {
@@ -456,36 +457,137 @@ bottom: -150px;
 
 
 .design .text h2 {
-    font-weight: normal;
-    text-transform: uppercase;
-    margin-bottom: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 
 .design .text ul li {
-    padding: 15px 0;
+  padding: 15px 0;
 }
+
 .design .text h2 ul li {
 
   padding: 15px 0;
 }
 
 .design .text ul li::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f108";
-    font-weight: 900;
-    margin-right: 20px;
-    position: relative;
-    top: 1px;
+  font-family: "Font Awesome 5 Free";
+  content: "\f108";
+  font-weight: 900;
+  margin-right: 20px;
+  position: relative;
+  top: 1px;
 }
+
 .design .text h2 ul li::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f108";
-    font-weight: 900;
-    margin-right: 20px;
-    position: relative;
-    top: 1px;
+  font-family: "Font Awesome 5 Free";
+  content: "\f108";
+  font-weight: 900;
+  margin-right: 20px;
+  position: relative;
+  top: 1px;
 
 }
 
 
 /* End Design  */
+
+/* Start Portfolio */
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.portfolio .container .shuffle {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio .container .shuffle li {
+  padding: 10px;
+  font-weight: 400;
+}
+
+.portfolio .container .shuffle .active {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.portfolio .imgs-container {
+  width: 100%;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.portfolio .imgs-container .box {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .imgs-container .box img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+.portfolio .imgs-container .box:hover img {
+  transform: rotate(3deg) scale(1.2);
+}
+
+.portfolio .imgs-container .box .caption {
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  transition: 0.3s;
+  bottom: -100%;
+}
+
+.portfolio .imgs-container .box:hover .caption {
+  bottom: 0;
+}
+
+
+.portfolio .imgs-container .box .caption h4 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.portfolio .imgs-container .box .caption p {
+  color: var(--main-color);
+  
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .portfolio .imgs-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  .portfolio .imgs-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.portfolio .more {
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+
+/* End Portfolio */
